@@ -1,10 +1,11 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import Navigation from '@/components/Navigation.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: "app",
-  components: { Navigation },
+  components: { Navigation, Footer },
   data() {
     return {
       navigation: null,
@@ -18,104 +19,120 @@ export default {
     <div class="app">
       <Navigation />
 
+      <Footer />
+
+
     </div>
   </div>
 </template>
 
-<style>
-@import '@/assets/base.css';
-
-#app {
-  max-width: 1280px;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
 }
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
+.link {
+  cursor: pointer;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  text-transform: uppercase;
+  color: black;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.link-light {
+  color: #fff;
+}
+.arrow {
+  margin-left: 8px;
+  width: 12px;
+  path {
+    fill: #000;
   }
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.arrow-light {
+  path {
+    fill: #fff;
+  }
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
+button,
+.router-button {
+  transition: 500ms ease all;
+  cursor: pointer;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background-color: #303030;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: rgba(48, 48, 48, 0.7);
+  }
 }
-
-nav a.router-link-exact-active:hover {
+.button-ghost {
+  color: #000;
+  padding: 0;
+  border-radius: 0;
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 500;
   background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+  @media (min-width: 700px) {
+    margin-top: 0;
+    margin-left: auto;
   }
-
-  #app {
+  i {
+    margin-left: 8px;
+  }
+}
+.button-light {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.button-inactive {
+  pointer-events: none !important;
+  cursor: none !important;
+  background-color: rgba(128, 128, 128, 0.5) !important;
+}
+.error {
+  text-align: center;
+  font-size: 12px;
+  color: red;
+}
+.blog-card-wrap {
+  position: relative;
+  padding: 80px 16px;
+  background-color: #f1f1f1;
+  @media (min-width: 500px) {
+    padding: 100px 16px;
+  }
+  .blog-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    gap: 32px;
+    grid-template-columns: 1fr;
+    @media (min-width: 500px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 </style>
