@@ -1,11 +1,23 @@
+<template>
+  <div class="app-wrapper">
+    <div class="app">
+      <Navigation />
+      <HomeView />
+      <Footer />
+
+
+    </div>
+  </div>
+</template>
+
 <script>
-import { RouterLink, RouterView } from 'vue-router'
 import Navigation from '@/components/Navigation.vue'
 import Footer from '@/components/Footer.vue'
+import HomeView from './views/HomeView.vue';
 
 export default {
   name: "app",
-  components: { Navigation, Footer },
+  components: { Navigation, Footer, HomeView },
   data() {
     return {
       navigation: null,
@@ -14,17 +26,7 @@ export default {
 }
 </script>
 
-<template>
-  <div class="app-wrapper">
-    <div class="app">
-      <Navigation />
 
-      <Footer />
-
-
-    </div>
-  </div>
-</template>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
