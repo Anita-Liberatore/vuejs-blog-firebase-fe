@@ -24,7 +24,7 @@ export default {
       sampleBlogPost: [{
         title: "This is a Filler Title",
         blogHTML: "This is a filler blog post title!",
-        blogCoverPhoto: "beautiful-sotires",
+        blogCoverPhoto: "beautiful-stories",
       },
       {
         title: "This is a Filler Title",

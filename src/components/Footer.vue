@@ -40,7 +40,7 @@
             </div>
 
             <div class="right">
-                <p>Copyright 2021 All Rights Reserved</p>
+                <p>Copyright 2022 All Rights Reserved</p>
             </div>
 
 
