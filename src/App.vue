@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <div class="app">
       <Navigation />
-      <HomeView />
+      <router-view />
       <Footer />
 
 

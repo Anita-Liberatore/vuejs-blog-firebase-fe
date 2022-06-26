@@ -13,9 +13,9 @@
     <div class="updates">
       <div class="container">
         <h2>never miss a post. Register for your free account today!</h2>
-        <router-link class="router-button" to="#">
+        <RouterLink class="router-button" to="#">
           Register for FireBlogs
-        </router-link>
+        </RouterLink>
       </div>
     </div>
 
@@ -27,6 +27,7 @@ import BlogPost from '../components/BlogPost.vue';
 import BlogCard from '../components/BlogCard.vue';
 
 export default {
+  name: "homeView",
   components: {
     BlogPost,
     BlogCard
