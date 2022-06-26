@@ -10,6 +10,15 @@
         </div>
       </div>
     </div>
+    <div class="updates">
+      <div class="container">
+        <h2>never miss a post. Register for your free account today!</h2>
+        <router-link class="router-button" to="#">
+          Register for FireBlogs
+        </router-link>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -21,7 +30,7 @@ export default {
   components: {
     BlogPost,
     BlogCard
-},
+  },
   data() {
     return {
       welcomeScreen: {
