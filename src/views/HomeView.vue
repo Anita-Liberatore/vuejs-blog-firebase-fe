@@ -14,7 +14,7 @@
       <div class="container">
         <h2>never miss a post. Register for your free account today!</h2>
         <RouterLink class="router-button" to="#">
-          Register for FireBlogs
+          Register for FireBlogs 
         </RouterLink>
       </div>
     </div>
